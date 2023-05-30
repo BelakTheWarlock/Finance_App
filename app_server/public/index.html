@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/main.js" defer></script>
+    <title>App Server</title>
+</head>
+<body>
+    <button id="add-hours-worked-button"><u>Add Hours</u></button>
+    <button id="reset-hours-worked-button"><u>Reset Hours</u></button>
+    <dialog id="update-hours-dialog">
+        <p>Add hours</p>
+        <form id="update-hours-form" method="dialog">
+            <label for="add-hours">
+                <input type="number" name="add-hours" id="update-hours-input" placeholder="0" value="0">
+                <input type="number" name="add-minutes" id="update-minutes-input" placeholder="0" value="0">
+                <input type="submit" value="Update">
+            </label>
+        </form>
+    </dialog>
+
+    <dialog id="reset-hours-dialog">
+        <p><b>Are you sure you want to reset worked hours?</b></p>
+        <button id="reset-hours-confirm">Confirm</button>
+        <button id="reset-hours-cancel">Cancel</button>
+    </dialog>
+
+    <div id="income-container">
+        <p class="card sweet-button pointer"><u>Salary</u><br /><b>$<span id="salary" class="fs-lr">0.0</span></b></p>
+        <p class="card sweet-button pointer"><u>Tax Rate</u><br /><b><span id="tax-rate" class="fs-lr">0.0</span>%</b></p>
+        <p><u>Taxed Salary</u><br /><b>$<span id="taxed-salary" class="fs-lr">0.0</span></b></p>
+        <p id="hours-worked-container">
+            <u>Hours Worked</u><br />
+            <b><span id="hours-worked">0.0</span>h</b>
+        </div>
+        <p><u>Total</u><br><b>$<span id="monthsTotal">0.0</span></b></p>
+    </div>
+</body>
+</html>
